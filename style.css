@@ -1,0 +1,83 @@
+/* 4つのセレクタの鮮明度 */
+/*********************
+上から順に優先される
+1 .card article img
+2 .card header = .card footer
+3 .card
+*********************/
+
+
+/* General */
+
+body {
+    margin: 0;
+}
+
+html {
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 10px;
+    background-color: #ccc;
+}
+
+h2, p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Card component */
+.card {
+    width: 35em;
+    height: 22em;
+    margin: 5em auto;
+    background-color: red;
+    border: 0.2em solid black;
+    border-radius: 1.5em;
+}
+/* Header/Footer */
+.card header,
+.card footer {
+    height: 30px;
+    padding: 10px;
+}
+
+.card header h2,
+.card footer p {
+    line-height: 30px;
+}
+
+.card header {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+    border-radius: 1.5em 1.5em 0 0;
+}
+
+.card header h2 {
+    font-size: 2em;
+}
+
+.card footer {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+    border-radius: 0 0 1.5em 1.5em;
+}
+
+.card footer p {
+    font-size: 1.5em;
+}
+
+/* Article */
+.card article {
+    height: 12em;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card article p {
+    padding-top: 10px;
+    padding-left: 10px;
+    color: #ccc;
+}
+
+.card article img {
+    max-height: 100%;
+    float: right;
+}
